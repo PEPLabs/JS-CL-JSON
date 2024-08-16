@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>JS-CL-JSON</title>
+</head>
+
+<body>
+    <h2>JSON Coding Lab</h2>
+    <p>In this exercise, you will need to use the `JSON` object's <strong>parse()</strong> and
+        <strong>stringify()</strong> functionality in order to complete this lab. Navigate to the
+        <strong><code>index.js</code></strong> file and complete the 2 exercises within it. You should not edit the code
+        in this file, but you can test out the functionality using the form below.
+    </p>
+    <hr>
+    <main>
+
+        <div>
+            <p>After filling out the form below, the resulting data should be correctly translated to both a JSON string and a JavaScript object.</p>
+            <form id="favoritesForm">
+                <label for="food">Food:</label>
+                <input type="text" id="food" name="food"><br>
+
+                <label for="animal">Animal:</label>
+                <input type="text" id="animal" name="animal"><br>
+
+                <label for="movie">Movie:</label>
+                <input type="text" id="movie" name="movie"><br>
+
+                <button type="submit">Submit</button>
+            </form>
+            
+        </div>
+
+        <div>
+            <p>JSON:</p>
+            <div class="code" id="JSONdiv"></div>
+            <p>JS Object:</p>
+            <div class="code" id="JSdiv"></div>
+        </div>
+
+
+    </main>
+</body>
+<script src="index.js"></script>
+
+</html>
