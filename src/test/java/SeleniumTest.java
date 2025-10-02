@@ -62,6 +62,7 @@ public class SeleniumTest {
       // 1. Detect browser and driver
       BrowserConfig browserConfig = detectBrowserAndDriver();
       this.browserType = browserConfig.browserType;
+      this.path = browserConfig.driverPath;
 
       // 2. Find HTML file and determine serving method
       File htmlFile = findHtmlFile();
@@ -326,7 +327,7 @@ public class SeleniumTest {
 
   private File findHtmlFile() {
     String[] possibleHtmlPaths = {
-        "src/main/index.html",
+        "src/main/java/index.html",
     };
 
     for (String htmlPath : possibleHtmlPaths) {
