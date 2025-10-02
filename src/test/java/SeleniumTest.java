@@ -1,10 +1,8 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
 import java.io.File;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.After;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Test;
+import org.junit.Before;
+import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -24,6 +22,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import static org.junit.Assert.assertEquals;
 
 public class SeleniumTest {
 
@@ -54,7 +54,7 @@ public class SeleniumTest {
     }
   }
 
-  @BeforeEach
+  @Before
   public void setUp() {
     try {
       printEnvironmentInfo();
@@ -114,7 +114,7 @@ public class SeleniumTest {
     String actual = (String) jsExecutor.executeScript("return exercise1(JSON.parse(arguments[0]));",
         "{\"food\":\"potato\"}");
     String expected = "{\"food\":\"potato\"}";
-    Assertions.assertEquals(expected, actual);
+    assertEquals(expected, actual);
   }
 
   @Test
@@ -126,7 +126,7 @@ public class SeleniumTest {
     String actual = (String) jsExecutor.executeScript("return exercise1(JSON.parse(arguments[0]));",
         "{\"food\":\"potato\", \"animal\":\"koala\", \"movie\":\"cloverfield\"}");
     String expected = "{\"food\":\"potato\",\"animal\":\"koala\",\"movie\":\"cloverfield\"}";
-    Assertions.assertEquals(expected, actual);
+    assertEquals(expected, actual);
   }
 
   @Test
@@ -138,7 +138,7 @@ public class SeleniumTest {
     Object actual = jsExecutor.executeScript("return exercise2(arguments[0]);",
         "{\"food\":\"potato\", \"animal\":\"koala\", \"movie\":\"cloverfield\"}");
     String expected = "{animal=koala, food=potato, movie=cloverfield}";
-    Assertions.assertEquals(expected, actual.toString());
+    assertEquals(expected, actual.toString());
   }
 
   @Test
@@ -150,7 +150,7 @@ public class SeleniumTest {
     Object actual = jsExecutor.executeScript("return exercise2(arguments[0]);",
         "{\"food\":\"banana\", \"animal\":\"cat\", \"movie\":\"up\"}");
     String expected = "{animal=cat, food=banana, movie=up}";
-    Assertions.assertEquals(expected, actual.toString());
+    assertEquals(expected, actual.toString());
   }
 
   private void printEnvironmentInfo() {
