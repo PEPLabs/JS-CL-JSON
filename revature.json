@@ -1,0 +1,30 @@
+{
+  "type": "java",
+  "testFiles": [
+    {
+      "path": "src/test/java/SeleniumTest.java",
+      "testCases": [
+        {
+          "methodName": "testExercise1",
+          "label": "Verify exercise1 with simple input",
+          "description": "Checks that the exercise1 JavaScript function correctly processes a single JSON object with a food property."
+        },
+        {
+          "methodName": "testExercise1Again",
+          "label": "Verify exercise1 with multiple properties",
+          "description": "Validates that the exercise1 JavaScript function correctly processes a JSON object containing multiple key-value pairs."
+        },
+        {
+          "methodName": "testExercise2",
+          "label": "Verify exercise2 object transformation",
+          "description": "Ensures that the exercise2 JavaScript function correctly converts a JSON object into a string representation of a Java map."
+        },
+        {
+          "methodName": "testExercise2Again",
+          "label": "Verify exercise2 with different input",
+          "description": "Checks that the exercise2 JavaScript function correctly handles a different JSON input and converts it into the expected Java map string."
+        }
+      ]
+    }
+  ]
+}
